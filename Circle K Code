@@ -1,0 +1,54 @@
+canvaswidth = 800
+canvasheight = 400
+numberofcolumns = 30
+numberofrows = 15
+triangle_height = canvaswidth/numberofcolumns
+
+function setup(){
+  createCanvas(canvaswidth, canvasheight);
+  background(50);
+    for(var i = 0;i<numberofcolumns;i++){
+      for(var j = 0;j<numberofrows;j++){
+        noStroke()
+        if(j<numberofrows/2){
+          
+          let redvalue = random(10+10*j, 90+50*j)
+          fill(redvalue, 10, 60)
+        }
+        else{
+          let redValue = random(10+(numberofrows-j), 90+50*(numberofrows-j))
+          fill(redValue, 10, 60)
+          
+        }
+      
+      let point1X = i*triangle_height
+      let point1Y = j*triangle_height
+      let point2X = (i+1)*triangle_height
+      let point2Y = j*triangle_height
+      let point3X = i*triangle_height
+      let point3Y = (j+1)*triangle_height
+      let point4X = (i+1)*triangle_height
+      let point4Y = (j+1)*triangle_height
+      
+triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
+      
+     if(j<numberofrows/2){
+       
+          let redvalue = random(10+10*j, 90+50*j)
+          fill(redvalue, 10, 60)
+        }
+        else{
+          let redValue = random(10+10*(numberofrows-j), 90+50*(numberofrows-j))
+          fill(redValue, 10, 60)
+        }
+      
+      triangle(point3X, point3Y, point2X, point2Y, point4X, point4Y)
+    }
+  }
+}
+
+
+
+function draw() {
+ 
+}
