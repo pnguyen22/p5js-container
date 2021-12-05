@@ -31,7 +31,6 @@ function setup(){
       let point3Y = (j+1)*triangle_height
       let point4X = (i+1)*triangle_height
       let point4Y = (j+1)*triangle_height
-ellipse()      
 triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
       
      if(j<numberofrows/2){
@@ -46,33 +45,54 @@ triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
       
       triangle(point3X, point3Y, point2X, point2Y, point4X, point4Y)
       
-        fill(250);
-        strokeWeight(6);
+        noFill();
+        strokeWeight(12);
+     
+        //blue left
         stroke(0,135,197);
-        ellipse(250, 150, 150, 150);
-        
-        fill(250);
-        stroke(0);
-        ellipse(350, 150, 150, 150);
-        
-        fill(250);
-        stroke(224,3,36);
-        ellipse(450, 150, 150, 150);
-        
-        fill(250);
+        arc(215, 150, 150, 150,QUARTER_PI, PI + QUARTER_PI);
+
+        //yellow left
         stroke(255,212,47);
-        ellipse(300, 225, 150, 150);
+        arc(300, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
         
-        fill(250);
+        //black lower left
+        stroke(0);
+        arc(385, 150, 150, 150, PI - QUARTER_PI, PI + QUARTER_PI);
+
+        //yellow right
+        stroke(255,212,47);
+        arc(300, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+        
+        //blue right 
+        stroke(0,135,197);
+        arc(215, 150, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+        
+        //black lower right
+        stroke(0);
+        arc(385, 150, 150, 150, QUARTER_PI, PI - QUARTER_PI);
+
+        //green left
         stroke(18,157,69);
-        ellipse(400, 225, 150, 150);
+        arc(480, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
         
-  
+        //red left
+        stroke(224,3,36);
+        arc(555, 150, 150, 150, PI - QUARTER_PI, TWO_PI - QUARTER_PI);
+
+        //green right
+        stroke(18,157,69);
+        arc(480, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+
+        //black upper
+        stroke(0);
+        arc(385, 150, 150, 150, TWO_PI - QUARTER_PI, QUARTER_PI);
+        arc(385, 150, 150, 150, PI + QUARTER_PI, TWO_PI - QUARTER_PI);
+
+        //red left
+        stroke(224,3,36);
+        arc(555, 150, 150, 150, TWO_PI - QUARTER_PI, PI - QUARTER_PI);   
+
     }
   }
-}
-
-
-function draw() {
-
 }
