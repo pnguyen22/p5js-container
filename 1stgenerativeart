@@ -1,12 +1,10 @@
-// Olympics symbol! Nicely done. 
-
 canvaswidth = 700
 canvasheight = 350
 numberofcolumns = 30
 numberofrows = 15
 triangle_height = canvaswidth/numberofcolumns
 
-function setup(){
+function draw() {  
   createCanvas(canvaswidth, canvasheight);
   background(50);
     for(var i = 0;i<numberofcolumns;i++){
@@ -45,34 +43,52 @@ triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
         }
       
       triangle(point3X, point3Y, point2X, point2Y, point4X, point4Y)
-      
+//I've made the Olympics circles'corlors changing randomly.
+        
+       let fillcolor1 = random(100,255)
+       let fillcolor2 = random(0)
+       let fillcolor3 = random(100,190)
+       
+       let fillcolor4 = random(50,200,30)
+       let fillcolor5 = random(101,300,255)
+       let fillcolor6 = random(10,200)
+
+       let fillcolor7 = random(125,204,300)
+       let fillcolor8 = random(40,70,80)
+       let fillcolor9 = random(100,200,230)
+
+       let fillcolor10 = random(230,101,30)
+       let fillcolor11 = random(70,204,109)
+       let fillcolor12 = random(80,287,200)
+    
+       
+       let fillcolor13 = random(234,155,20)
+       let fillcolor14 = random(222,113,29)
+       let fillcolor15 = random(70,187,212)
+       
+
         fill(250);
         strokeWeight(6);
-        stroke(0,135,197);
+        stroke(fillcolor1,fillcolor2,fillcolor3);
         ellipse(250, 150, 150, 150);
         
         fill(250);
-        stroke(0);
+        stroke(fillcolor4,fillcolor5,fillcolor6);
         ellipse(350, 150, 150, 150);
         
         fill(250);
-        stroke(224,3,36);
+        stroke(fillcolor7,fillcolor8,fillcolor9);
         ellipse(450, 150, 150, 150);
         
         fill(250);
-        stroke(255,212,47);
+        stroke(fillcolor10,fillcolor11,fillcolor12);
         ellipse(300, 225, 150, 150);
         
         fill(250);
-        stroke(18,157,69);
+        stroke(fillcolor13,fillcolor14,fillcolor15);
         ellipse(400, 225, 150, 150);
         
   
     }
   }
-}
-
-
-function draw() {
-
 }
