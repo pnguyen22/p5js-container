@@ -9,10 +9,8 @@ CIRCLE_X = 250
 CIRCLE_Y = 150
 
 
-function setup() {  
+function setup() {
   createCanvas(canvaswidth, canvasheight);
-}
-function draw() {
   background(50);
     for(var i = 0;i<numberofcolumns;i++){
       for(var j = 0;j<numberofrows;j++){
@@ -25,7 +23,6 @@ function draw() {
         else{
           let redValue = random(10+(numberofrows-j), 90+50*(numberofrows-j))
           fill(redValue, 100, 30)
-          
         }
       
       let point1X = i*triangle_height
@@ -53,7 +50,7 @@ triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
 
       
         noFill();
-        strokeWeight(12);
+        strokeWeight(8);
      
         //blue left
         stroke(0,135,197);
@@ -98,10 +95,7 @@ triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
 
         //red left
         stroke(224,3,36);
-        arc(555, 150, 150, 150, TWO_PI - QUARTER_PI, PI - QUARTER_PI);   
-
-
-//I've made the Olympics circles' colors changing randomly.
+        arc(555, 150, 150, 150, TWO_PI - QUARTER_PI, PI - QUARTER_PI); 
         
 
     }
