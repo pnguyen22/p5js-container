@@ -36,7 +36,7 @@ function draw() {
       let point3Y = (j+1)*triangle_height
       let point4X = (i+1)*triangle_height
       let point4Y = (j+1)*triangle_height
-     
+
 triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
       
      if(j<numberofrows/2){
@@ -51,82 +51,59 @@ triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
       
       triangle(point3X, point3Y, point2X, point2Y, point4X, point4Y)
 
-//I've made the Olympics circles'corlors changing randomly.
-        
-       let fillcolor1 = random(100,255)
-       let fillcolor2 = random(0)
-       let fillcolor3 = random(100,190)
-       
-       let fillcolor4 = random(50,200)
-       let fillcolor5 = random(101,255)
-       let fillcolor6 = random(10,200)
-
-       let fillcolor7 = random(125,204)
-       let fillcolor8 = random(40,70)
-       let fillcolor9 = random(100,200)
-
-       let fillcolor10 = random(230,30)
-       let fillcolor11 = random(70,109)
-       let fillcolor12 = random(80,200)
-    
-       
-       let fillcolor13 = random(155,20)
-       let fillcolor14 = random(113,29)
-       let fillcolor15 = random(70,187)
-       
-
-        fill(250);
-        strokeWeight(6);
-        stroke(fillcolor1,fillcolor2,fillcolor3);
-        ellipse(250, 150, 150, 150);
-        
-        fill(250);
-        stroke(fillcolor4,fillcolor5,fillcolor6);
-        ellipse(350, 150, 150, 150);
-        
-        fill(250);
-        stroke(fillcolor7,fillcolor8,fillcolor9);
-        ellipse(450, 150, 150, 150);
-        
-        fill(250);
-        stroke(fillcolor10,fillcolor11,fillcolor12);
-        ellipse(300, 225, 150, 150);
-        
-        fill(250);
-        stroke(fillcolor13,fillcolor14,fillcolor15);
-        ellipse(400, 225, 150, 150);
-      
-        
-        
-      let circleblackx = CIRCLE_X +100
-      let circleredx = CIRCLE_X + 200
-      let circleyellow = CIRCLE_X + 50
-      let circlegreenx = CIRCLE_X +150
-      let circlegreenandyellowy = CIRCLE_Y + 75
       
         noFill();
-        strokeWeight(6);
+        strokeWeight(12);
+     
+        //blue left
         stroke(0,135,197);
-        ellipse(CIRCLE_X, CIRCLE_Y, CIRCLE_WIDTH, CIRCLE_HEIGHT);
-        
-        noFill();
-        stroke(0);
-        ellipse( circleblackx,CIRCLE_Y , CIRCLE_WIDTH, CIRCLE_HEIGHT);
-        
-        noFill();
-        stroke(224,3,36);
-        ellipse( circleredx, CIRCLE_Y, CIRCLE_WIDTH, CIRCLE_HEIGHT);
-        
-        noFill();
-        stroke(255,212,47);
-        ellipse(circleyellow, circlegreenandyellowy,CIRCLE_WIDTH, CIRCLE_HEIGHT);
-        
-        noFill();
-        stroke(18,157,69);
-        ellipse(circlegreenx,circlegreenandyellowy, CIRCLE_WIDTH, CIRCLE_HEIGHT);
+        arc(215, 150, 150, 150,QUARTER_PI, PI + QUARTER_PI);
 
-       
-  
+        //yellow left
+        stroke(255,212,47);
+        arc(300, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
+        
+        //black lower left
+        stroke(0);
+        arc(385, 150, 150, 150, PI - QUARTER_PI, PI + QUARTER_PI);
+
+        //yellow right
+        stroke(255,212,47);
+        arc(300, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+        
+        //blue right 
+        stroke(0,135,197);
+        arc(215, 150, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+        
+        //black lower right
+        stroke(0);
+        arc(385, 150, 150, 150, QUARTER_PI, PI - QUARTER_PI);
+
+        //green left
+        stroke(18,157,69);
+        arc(480, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
+        
+        //red left
+        stroke(224,3,36);
+        arc(555, 150, 150, 150, PI - QUARTER_PI, TWO_PI - QUARTER_PI);
+
+        //green right
+        stroke(18,157,69);
+        arc(480, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+
+        //black upper
+        stroke(0);
+        arc(385, 150, 150, 150, TWO_PI - QUARTER_PI, QUARTER_PI);
+        arc(385, 150, 150, 150, PI + QUARTER_PI, TWO_PI - QUARTER_PI);
+
+        //red left
+        stroke(224,3,36);
+        arc(555, 150, 150, 150, TWO_PI - QUARTER_PI, PI - QUARTER_PI);   
+
+
+//I've made the Olympics circles' colors changing randomly.
+        
+
     }
   }
 }
