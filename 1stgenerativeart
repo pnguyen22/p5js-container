@@ -52,50 +52,52 @@ triangle(point1X, point1Y, point2X, point2Y, point3X, point3Y)
         noFill();
         strokeWeight(8);
      
+        xShift = 35;
+     
         //blue left
         stroke(0,135,197);
-        arc(215, 150, 150, 150,QUARTER_PI, PI + QUARTER_PI);
+        arc(215 -xShift, 150, 150, 150,QUARTER_PI, PI + QUARTER_PI);
 
         //yellow left
         stroke(255,212,47);
-        arc(300, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
-        
+        arc(300-xShift, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
+
         //black lower left
         stroke(0);
-        arc(385, 150, 150, 150, PI - QUARTER_PI, PI + QUARTER_PI);
+        arc(385-xShift, 150, 150, 150, PI - QUARTER_PI, PI + QUARTER_PI);
 
         //yellow right
         stroke(255,212,47);
-        arc(300, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
-        
+        arc(300-xShift, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+      
         //blue right 
         stroke(0,135,197);
-        arc(215, 150, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+        arc(215-xShift, 150, 150, 150, PI + QUARTER_PI, QUARTER_PI);
         
         //black lower right
         stroke(0);
-        arc(385, 150, 150, 150, QUARTER_PI, PI - QUARTER_PI);
+        arc(385-xShift, 150, 150, 150, QUARTER_PI, PI - QUARTER_PI);
 
         //green left
         stroke(18,157,69);
-        arc(480, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
+        arc(480-xShift, 225, 150, 150, QUARTER_PI, PI + QUARTER_PI);
         
         //red left
         stroke(224,3,36);
-        arc(555, 150, 150, 150, PI - QUARTER_PI, TWO_PI - QUARTER_PI);
+        arc(555-xShift, 150, 150, 150, PI - QUARTER_PI, TWO_PI - QUARTER_PI);
 
         //green right
         stroke(18,157,69);
-        arc(480, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
+        arc(480-xShift, 225, 150, 150, PI + QUARTER_PI, QUARTER_PI);
 
         //black upper
         stroke(0);
-        arc(385, 150, 150, 150, TWO_PI - QUARTER_PI, QUARTER_PI);
-        arc(385, 150, 150, 150, PI + QUARTER_PI, TWO_PI - QUARTER_PI);
+        arc(385-xShift, 150, 150, 150, TWO_PI - QUARTER_PI, QUARTER_PI);
+        arc(385-xShift, 150, 150, 150, PI + QUARTER_PI, TWO_PI - QUARTER_PI);
 
         //red left
         stroke(224,3,36);
-        arc(555, 150, 150, 150, TWO_PI - QUARTER_PI, PI - QUARTER_PI); 
+        arc(555-xShift, 150, 150, 150, TWO_PI - QUARTER_PI, PI - QUARTER_PI);   
         
 
     }
